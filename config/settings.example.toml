@@ -1,0 +1,21 @@
+[application]
+environment = "development"
+log_level = "INFO"
+
+[trading]
+enabled = false
+mode = "shadow"
+symbol_allowlist = ["BTC-USD"]
+
+[risk]
+# Conservative placeholders for initial shadow and canary testing.
+max_order_notional_usd = 5.00
+max_total_exposure_usd = 25.00
+max_daily_loss_usd = 5.00
+max_consecutive_errors = 3
+market_data_stale_after_seconds = 10
+
+[data]
+raw_directory = "data/raw"
+research_directory = "data/research"
+state_database = "state/runtime.sqlite3"

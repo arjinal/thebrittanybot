@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thebrittanybot"
+version = "0.1.0"
+description = "Safety-first experimental cryptocurrency trading architecture"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "arjinal" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.12,<1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
